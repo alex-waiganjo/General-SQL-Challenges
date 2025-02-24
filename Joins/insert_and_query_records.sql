@@ -48,14 +48,25 @@
 -- ("F8", "Ben",30, "F4");
 
 
--- LEFT JOIN
+-- LEFT JOIN # gets all values in letf table only, together with those on the right table
 -- SELECT employee.name AS Employee_Name, department_name AS Department_Name, manager.name AS Manager_Name
 -- FROM employee
 -- LEFT JOIN department ON employee.department_id = department.id
 -- LEFT JOIN manager ON employee.manager_id = manager.id;
 
 
--- FULL OUTTER JOIN
+-- RIGHT JOIN # gets all values in right table only, together with those on the left table
+-- SELECT employee.name AS Employee_Name, department_name AS Department_Name, manager.name AS Manager_Name
+-- FROM employee
+-- RIGHT JOIN department ON employee.department_id = department.id
+
+-- INNER JOIN # common values in both left and right tables
+-- SELECT employee.name AS Employee_Name, department_name AS Department_Name, manager.name AS Manager_Name
+-- FROM employee
+-- INNER JOIN department ON employee.department_id = department.id
+
+
+-- FULL OUTTER JOIN # comines inner, left and rights join
 -- SELECT d.department_name AS Department_Name, m.name AS Manager_Name
 -- FROM department d
 -- LEFT JOIN manager m ON m.department_id= d.id 
@@ -71,7 +82,7 @@
 -- CROSS JOIN department;
 
 
--- SELF JOIN
+-- SELF JOIN # occurs where there is only one table involved
 --SELECT child.full_name as Child_Name, child.age as Child_Age, parent.full_name as Parent_Name, parent.age as Parent_Age
 -- FROM Family AS child 
 -- JOIN Family as parent ON child.parent_id = parent.member_id;
